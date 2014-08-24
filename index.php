@@ -34,7 +34,7 @@ function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
-}
+}*/
 
 window.fbAsyncInit = function() {
 	FB.init({
@@ -61,7 +61,7 @@ window.fbAsyncInit = function() {
 		statusChangeCallback(response);
 	});
 */
-//};
+};
 
 // Load the SDK asynchronously
 (function(d, s, id) {
@@ -82,7 +82,7 @@ window.fbAsyncInit = function() {
     });
 }*/
 function fbLoginClicked(){
-	FB.login()
+	FB.login();
 }
 </script>
 
