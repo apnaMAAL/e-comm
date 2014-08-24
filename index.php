@@ -34,7 +34,7 @@ function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
-}
+}*/
 
 window.fbAsyncInit = function() {
 	FB.init({
@@ -61,8 +61,7 @@ window.fbAsyncInit = function() {
 		statusChangeCallback(response);
 	});
 */
-//};
-
+};
 // Load the SDK asynchronously
 (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];
@@ -79,10 +78,13 @@ window.fbAsyncInit = function() {
     FB.api('/me', function(response) {
     	console.log('Successful login for: ' + response.name);
     	document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
-    });
-}*/
+    });*/
+//}
 function fbLoginClicked(){
-	FB.login()
+	FB.login(function(response)
+		{
+			console.log(response);
+		},{scope: "public_profile,email"});
 }
 </script>
 
