@@ -1,1 +1,0 @@
-<button>Sign in with FB</button>
