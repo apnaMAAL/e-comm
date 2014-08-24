@@ -84,6 +84,9 @@ function fbLoginClicked(){
 	FB.login(function(response)
 		{
 			console.log(response);
+			if(response.status == "connected") {
+				window.location = "/e-comm/fb.php";
+			}
 		},{scope: "public_profile,email"});
 }
 </script>
