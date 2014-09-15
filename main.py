@@ -6,10 +6,11 @@ import logging
 import sys
 sys.path.insert(0, 'lib')
 
+from ecomm.handler import Handler
 
-class HomeHandler(webapp2.RequestHandler):
+class HomeHandler(Handler):
     def get(self):
-        self.response.write('Hello wrold,')
+        self.render('hello.html')
 
 
 app = webapp2.WSGIApplication([
